@@ -1,0 +1,29 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "cnode小程序",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar":{
+    "list":[{
+        "pagePath":"pages/index/index",
+        "text":"首页",
+        "iconPath":"images/tabBar/home.png",
+        "selectedIconPath":"images/tabBar/home_hl.png"
+      },{
+        "pagePath":"pages/logs/logs",
+        "text":"我的",
+        "iconPath":"images/tabBar/my.png",
+        "selectedIconPath":"images/tabBar/my_hl.png"
+      }],
+    "color":"#000000",
+    "backgroundColor":"#fff",
+    "selectedColor":"#80bd01",
+    "borderStyle":"white"
+  }
+}

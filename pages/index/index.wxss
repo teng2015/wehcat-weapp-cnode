@@ -1,0 +1,84 @@
+/**index.wxss**/
+.container {
+  box-sizing: border-box;
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0；
+}
+.tab-bar {
+  width: 100%;
+  height: 75rpx;
+  margin: 0;
+  padding: 0;
+  background: rgba(51,51,51,.78);
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+.tab-bar-item {
+  height: 75rpx;
+  display:inline-block;
+  width: 150rpx;
+  color: #fdf4da;
+  text-align: center;
+  line-height: 75rpx; 
+  font-size: 28rpx;
+  box-sizing: border-box;
+}
+.tab-bar-selected{
+  border-bottom: 8rpx solid #f7e31b;
+}
+
+.topic-list {
+  box-sizing: border-box;
+  margin-top: 75rpx;
+  height: 600px;
+}
+
+.topic-item {
+  box-sizing: border-box;
+  height: 180rpx;
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #d3d3d3;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 40rpx 30rpx 40rpx 150rpx;
+  position: relative;
+}
+.topic-item-avatar {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  position: absolute;
+  top: 40rpx;
+  left: 20rpx;
+}
+.topic-item-title {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+.topic-item-top-flag, .topic-item-good-flag {
+  color: red;
+  font-weight: 500;
+  font-size: 17px;
+  position: absolute;
+  top: 30rpx;
+  left: 100rpx;
+}
+.topic-item-info {
+  position: absolute;
+  bottom: 35rpx;
+  left: 150rpx;
+  font-size: 12rpx;
+}
+.topic-item-create-time {
+  position: absolute;
+  bottom: 35rpx;
+  right: 30rpx;
+  font-size: 12rpx;
+}

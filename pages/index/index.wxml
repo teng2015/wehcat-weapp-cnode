@@ -1,0 +1,27 @@
+<!--index.wxml-->
+<view>
+  <loading hidden="{{!isFetching}}">加载中...</loading>
+  <view class="tab-bar">
+    <block wx:for="{{tabList}}">
+      <view data-index="{{item.index}}"
+            class="tab-bar-item {{item.index === currentTab ? 'tab-bar-selected' : ''}}"
+            catchtap="onTapTabBar">
+            {{item.title}}
+      </view>
+    </block>
+  </view>
+  <scroll-view class="topic-list" scroll-y="true"  lower-threshold="150" bindscrolltolower="getNextPage">
+    <block wx:for="{{currentData}}">
+      <view class="topic-item">
+        <navigator>
+          <image src="{{item.author.avatar_url}}" class="topic-item-avatar"></image>
+          <text class="topic-item-top-flag" wx:if="{{item.top === true}}">顶</text>
+          <text class="topic-item-good-flag" wx:if="{{item.good === true}}">精</text>
+          <text class="topic-item-title">{{item.title}}</text>
+          <view class="topic-item-info">{{item.reply_count}}/{{item.visit_count}}</view>
+          <view class="topic-item-create-time">{{item.create_at}}</view>
+        </navigator>
+      </view>
+    </block>
+  </scroll-view>
+</view>
